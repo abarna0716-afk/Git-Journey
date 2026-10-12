@@ -1,0 +1,111 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="logo" href="#home">MyPortfolio<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Sk<ills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">HELLO, WELCOME TO MY WEBSITE</p>
+        
+        <h1>Hi, I'm <span>Abarna</span></h1>
+         <h2>Web Developer in Training</h2>
+
+        <p class="hero-text">I'm learning to build clean, responsive websites using HTML, CSS and JavaScript.</p>
+       <a class="primary-button" href="#contact" id="contactButton">Contact Me</a>
+      </div>
+      <div class="hero-card" aria-label="Web development illustration">
+        <div class="code-window">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <p><span class="code-purple">const</span> future = {</p>
+          <p class="indent">skills: <span class="code-green">'Web Development'</span>,</p>
+          <p class="indent">learning: <span class="code-orange">true</span></p>
+          <p>};</p>
+          <p class="code-comment">// Keep learning!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <p class="eyebrow">GET TO KNOW ME</p>
+      <h2>About Me</h2>
+      <p>I'm a BCA graduate and a beginner web developer. I enjoy learning new technology and creating websites. My goal is to improve my skills by building practical projects.</p>
+    </section>
+
+    <section class="section skills" id="skills">
+      <p class="eyebrow">WHAT I'M LEARNING</p>
+      <h2>My Skills</h2>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <h3>HTML</h3>
+          <p>Building the structure of a website.</p>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>CSS</h3>
+          <p>Adding colours, layouts and responsive design.</p>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <h3>JavaScript</h3>
+          <p>Making websites interactive.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2>Contact Me</h2>
+      <p>Have a project idea or want to connect? Send me a message.</p>
+      <form id="contactForm">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message" required></textarea>
+        <button class="primary-button" type="submit">Send Message</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+      <p class="small-note">Practice demo: this form does not send messages to an inbox yet.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> My Portfolio. Built while learning web development.</p>
+  </footer>
+  <div class="modal-overlay" id="successModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModal">&times;</button>
+    <div class="success-icon">&#10003;</div>
+    <h2>Thank you!</h2>
+    <p>You clicked the Contact Me button.</p>
+    <p>I'll get back to you soon!</p>
+    <button class="modal-ok" id="okModal">OK</button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+  
+
+
+</body>
+</html>
